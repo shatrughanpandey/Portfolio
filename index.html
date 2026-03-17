@@ -16,13 +16,11 @@
   }
   body { font-family: 'Segoe UI', sans-serif; background: #fff; color: var(--text); scroll-behavior: smooth; }
 
-  /* NAV */
   nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.97); padding: 1rem 2rem; display:flex; justify-content:flex-end; align-items:center; z-index:100; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
   nav ul { list-style:none; display:flex; gap:2rem; }
   nav ul a { color: var(--navy); text-decoration:none; font-size:0.9rem; font-weight:500; transition:color 0.3s; }
   nav ul a:hover { color: var(--accent); }
 
-  /* HERO */
   .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding: 6rem 2rem 2rem; background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%); }
   .hero-inner { max-width: 700px; }
   .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--navy); margin-bottom: 0.5rem; }
@@ -33,13 +31,11 @@
   .btn:hover { opacity:0.85; transform: translateY(-2px); }
   .btn.outline { background: transparent; border: 2px solid var(--navy); color: var(--navy); }
 
-  /* SECTIONS */
   section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
   .section-title { font-size:1.8rem; color: var(--navy); margin-bottom: 0.3rem; }
-  .section-title span { color: var(--accent); }
+  .section-title span { color: var(--navy); }
   .divider { width:50px; height:3px; background: var(--accent); margin-bottom:2.5rem; }
 
-  /* ABOUT */
   .about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:2rem; }
   .about-text p { color: var(--gray); line-height:1.9; margin-bottom:1rem; }
   .stats { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
@@ -47,7 +43,6 @@
   .stat-box .num { font-size:1.8rem; font-weight:700; color: var(--accent); }
   .stat-box .label { font-size:0.8rem; color: var(--gray); margin-top:0.3rem; }
 
-  /* EXPERIENCE */
   .timeline { position:relative; }
   .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background: #e0e0e0; }
   .job { padding-left:2rem; margin-bottom:2rem; position:relative; }
@@ -57,35 +52,29 @@
   .job-company { color: var(--accent); font-size:0.9rem; margin-top:0.2rem; }
   .job-date { color: var(--gray); font-size:0.85rem; }
 
-  /* SKILLS */
   .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem; }
   .skill-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-top: 3px solid var(--accent); }
   .skill-card h4 { color: var(--navy); margin-bottom:1rem; font-size:0.95rem; }
   .tag-list { display:flex; flex-wrap:wrap; gap:0.5rem; }
   .tag { background: rgba(240,165,0,0.12); border: 1px solid rgba(240,165,0,0.4); color: #a07000; padding:0.25rem 0.6rem; border-radius:20px; font-size:0.78rem; }
 
-  /* PROJECTS */
   .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
   .project-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-bottom: 3px solid var(--accent); transition: transform 0.2s; }
   .project-card:hover { transform: translateY(-4px); }
   .project-card h4 { color: var(--navy); margin-bottom:0.7rem; font-size:1rem; }
   .project-card p { color: var(--gray); font-size:0.88rem; line-height:1.7; }
 
-  /* EDUCATION */
   .edu-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
   .edu-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-left: 3px solid var(--accent); }
   .edu-card h4 { color: var(--navy); font-size:0.95rem; margin-bottom:0.3rem; }
   .edu-card .school { color: var(--accent); font-size:0.9rem; }
-  .edu-card .year { color: var(--gray); font-size:0.82rem; margin-top:0.3rem; }
+  .edu-card .year { color: var(--gray); font-size:0.82rem; margin-top:0.3rem; margin-bottom:0.8rem; }
 
-  /* CONTACT */
   .contact-box { background: var(--lightgray); border-radius:8px; padding:2.5rem; text-align:center; }
-  .contact-box p { color: var(--gray); margin-bottom:1.5rem; line-height:1.8; }
-  .contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-top:1.5rem; }
+  .contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
   .contact-link { color: var(--navy); text-decoration:none; font-size:0.9rem; border: 1px solid var(--navy); padding:0.5rem 1.2rem; border-radius:4px; transition: background 0.2s; }
   .contact-link:hover { background: rgba(30,58,95,0.08); }
 
-  /* FOOTER */
   footer { text-align:center; padding:2rem; color: var(--gray); font-size:0.85rem; border-top: 1px solid #e0e0e0; }
 
   @media(max-width:650px) {
@@ -106,26 +95,24 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <h1>Hi, I'm <span>Shatrughan</span></h1>
-    <h2>Assistant Project Manager | Heavy Civil & Infrastructure Construction</h2>
+    <h2>Assistant Project Manager, Heavy Civil and Infrastructure Construction</h2>
     <p>4+ years driving complex infrastructure projects from bid to closeout. Currently managing an $80M portfolio with NYDOT, specializing in cost estimating, scheduling, and construction project controls.</p>
     <a href="#experience" class="btn">View My Work</a>
     <a href="#contact" class="btn outline">Get In Touch</a>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-title">About <span>Me</span></div>
   <div class="divider"></div>
   <div class="about-grid">
     <div class="about-text">
- and India.</p>
-      <p>Currently serving as Assistant Project Manager at Butler Construction Group in Montgomery, NY, I bring a data-driven approach to cost estimating, scheduling, and project controls — leveraging tools like Primavera P6, Procore, and Trimble Business Center.</p>
-
+      <p>I'm Shatrughan Pandey, a construction project management professional with 4+ years of experience across the US and India. From managing utility projects in Ahmedabad to estimating $400M in infrastructure work in Massachusetts, I've built my career across every phase of construction.</p>
+      <p>Currently I serve as Assistant Project Manager at Butler Construction Group in Montgomery, NY, where I oversee an $80M heavy civil portfolio including NYDOT highway work. I specialize in cost estimating, scheduling, and project controls.</p>
+      <p>I enjoy blending technical expertise with modern tools — whether that's 3D digital takeoffs in Trimble Business Center, AI-assisted scheduling, or data management in Power BI. I believe construction's future lies in smarter, data-driven decision making.</p>
     </div>
     <div class="stats">
       <div class="stat-box"><div class="num">$80M+</div><div class="label">Portfolio Managed</div></div>
@@ -136,46 +123,40 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-title">Professional <span>Experience</span></div>
   <div class="divider"></div>
   <div class="timeline">
-
     <div class="job">
       <div class="job-header">
         <div>
           <div class="job-title">Assistant Project Manager</div>
-          <div class="job-company">Butler Construction Group — Montgomery, NY</div>
+          <div class="job-company">Butler Construction Group, Montgomery, NY</div>
         </div>
         <div class="job-date">May 2025 – Present</div>
       </div>
     </div>
-
     <div class="job">
       <div class="job-header">
         <div>
           <div class="job-title">Project Estimator Co-op</div>
-          <div class="job-company">United Civil — Danvers, MA</div>
+          <div class="job-company">United Civil, Danvers, MA</div>
         </div>
         <div class="job-date">Aug 2024 – Dec 2024</div>
       </div>
     </div>
-
     <div class="job">
       <div class="job-header">
         <div>
           <div class="job-title">Project Engineer</div>
-          <div class="job-company">Jayesh A Dalal Planning & Engineering Services — Ahmedabad, India</div>
+          <div class="job-company">Jayesh A Dalal Planning & Engineering Services, Ahmedabad, India</div>
         </div>
         <div class="job-date">Sep 2020 – May 2023</div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-title">Skills &amp; <span>Tools</span></div>
   <div class="divider"></div>
@@ -214,7 +195,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-title">Academic <span>Projects</span></div>
   <div class="divider"></div>
@@ -230,7 +210,6 @@
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="section-title"><span>Education</span></div>
   <div class="divider"></div>
@@ -239,7 +218,7 @@
       <h4>M.S. Construction & Project Management</h4>
       <div class="school">Northeastern University</div>
       <div class="year">Boston, MA | Sep 2023 – Jun 2025</div>
-      <div class="tag-list" style="margin-top:0.8rem;">
+      <div class="tag-list">
         <span class="tag">Risk Management</span>
         <span class="tag">Scheduling & Cost Planning</span>
         <span class="tag">Bid & Contract Management</span>
@@ -254,7 +233,7 @@
       <h4>B.E. Civil Engineering</h4>
       <div class="school">Gujarat Technological University</div>
       <div class="year">Ahmedabad, India | Jul 2016 – Aug 2020</div>
-      <div class="tag-list" style="margin-top:0.8rem;">
+      <div class="tag-list">
         <span class="tag">Highway Engineering</span>
         <span class="tag">Concrete Technology</span>
         <span class="tag">Foundation Engineering</span>
@@ -266,7 +245,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-title">Get In <span>Touch</span></div>
   <div class="divider"></div>
