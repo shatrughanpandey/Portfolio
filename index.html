@@ -37,6 +37,8 @@
   .divider { width:50px; height:3px; background: var(--accent); margin-bottom:2.5rem; }
 
   .about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:2rem; }
+  .about-text { display:flex; gap:1.5rem; align-items:flex-start; }
+  .about-text img { width:110px; height:110px; border-radius:50%; object-fit:cover; border: 3px solid var(--accent); flex-shrink:0; }
   .about-text p { color: var(--gray); line-height:1.9; margin-bottom:1rem; }
   .stats { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
   .stat-box { background: var(--lightgray); border-radius:8px; padding:1.2rem; text-align:center; border-left: 3px solid var(--accent); }
@@ -110,9 +112,12 @@
   <div class="divider"></div>
   <div class="about-grid">
     <div class="about-text">
+      <img src="Profile Picture.jpeg" alt="Shatrughan Pandey"/>
+      <div>
       <p>I'm Shatrughan Pandey, a construction project management professional with 4+ years of experience across the US and India. My work in India spanned heavy civil, asphalt and concrete pavement, foundation works, material testing, and QA/QC across multiple project types.</p>
       <p>Currently I serve as Assistant Project Manager at Butler Construction Group in Montgomery, NY, working on heavy civil and NYDOT highway projects. I specialize in cost estimating, scheduling, and project controls.</p>
       <p>I enjoy blending technical expertise with modern tools, whether that's digital takeoffs, AI-assisted scheduling, or data-driven reporting. I believe construction's future lies in smarter decision making.</p>
+      </div>
     </div>
     <div class="stats">
       <div class="stat-box"><div class="num">$100M+</div><div class="label">Portfolio Managed</div></div>
