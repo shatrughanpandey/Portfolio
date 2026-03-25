@@ -63,10 +63,15 @@
 
   /* PROJECTS */
   .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
-  .project-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-bottom: 3px solid var(--accent); transition: transform 0.2s; }
-  .project-card:hover { transform: translateY(-4px); }
-  .project-card h4 { color: var(--navy); margin-bottom:0.7rem; font-size:1rem; }
-  .project-card p { color: var(--gray); font-size:0.88rem; line-height:1.7; }
+  .project-card { background: var(--lightgray); border-radius:8px; border-bottom: 3px solid var(--accent); overflow:hidden; }
+  .project-header { padding:1.5rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition: background 0.2s; }
+  .project-header:hover { background: #ebebeb; }
+  .project-header h4 { color: var(--navy); font-size:1rem; margin:0; }
+  .project-arrow { color: var(--accent); font-size:1.2rem; transition: transform 0.3s; }
+  .project-arrow.open { transform: rotate(180deg); }
+  .project-body { max-height:0; overflow:hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.5rem; }
+  .project-body.open { max-height:600px; padding: 0 1.5rem 1.5rem; }
+  .project-body p { color: var(--gray); font-size:0.88rem; line-height:1.7; margin-bottom:0.7rem; }
 
   /* EDUCATION */
   .edu-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
@@ -216,12 +221,32 @@
   <div class="divider"></div>
   <div class="projects-grid">
     <div class="project-card">
-      <h4>🎓 Capstone: Integrated Fundraising Strategy</h4>
-      <p>Led a 6-person team to deliver a sponsor-approved $140K Integrated Project Plan, enabling a $4M nonprofit funding pipeline for Green Our Planet within a 10-week critical path. Achieved 90% sponsor approval across 8 deliverables.</p>
+      <div class="project-header" onclick="toggleProject(this)">
+        <h4>🤖 AI-Optimized Scheduling & Cost Estimating</h4>
+        <span class="project-arrow">▼</span>
+      </div>
+      <div class="project-body">
+        <p style="font-size:0.82rem;color:var(--accent);">5,000 sq.ft. Commercial Building</p>
+        <p>Developed AI-assisted cost estimates and schedules, integrating RSMeans data with AI-based quantity takeoff methods. Built a detailed MS Project schedule using resource optimization and leveling techniques to reduce schedule overruns and cost variance.</p>
+        <p>Created a WBS, project charter, and network diagrams to identify bottlenecks. Delivered a transparent, data-driven bid package supporting scope definition and stakeholder coordination.</p>
+        <div class="tag-list">
+          <span class="tag">MS Project</span><span class="tag">RSMeans</span><span class="tag">AI Estimating</span><span class="tag">WBS</span><span class="tag">Resource Leveling</span>
+        </div>
+      </div>
     </div>
     <div class="project-card">
-      <h4>🤖 AI-Optimized Scheduling & Cost Estimating</h4>
-      <p>Directed AI-assisted cost estimating and bid prep for a 5,000 sq.ft. building. Integrated RSMeans with AI quantity takeoff, built MS Project schedule with AI resource optimization, and delivered a transparent bid package with data-driven scope definition.</p>
+      <div class="project-header" onclick="toggleProject(this)">
+        <h4>🎓 Integrated Fundraising Strategy</h4>
+        <span class="project-arrow">▼</span>
+      </div>
+      <div class="project-body">
+        <p style="font-size:0.82rem;color:var(--accent);">Nonprofit Organization</p>
+        <p>Led a six-member team to develop a comprehensive fundraising strategy, delivering a sponsor-approved implementation plan within a 10-week timeline. Designed a scalable funding framework aligned with a $100K annual budget.</p>
+        <p>Conducted risk analysis and built a diversification matrix. Established communication protocols, quality metrics, and milestone tracking systems to improve coordination and secure stakeholder approval.</p>
+        <div class="tag-list">
+          <span class="tag">Risk Analysis</span><span class="tag">Stakeholder Management</span><span class="tag">Scheduling</span><span class="tag">Budget Planning</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -278,6 +303,15 @@
 <footer>
   <p>© 2025 Shatrughan Pandey · Built with GitHub Pages</p>
 </footer>
+
+<script>
+function toggleProject(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.project-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+</script>
 
 </body>
 </html>
