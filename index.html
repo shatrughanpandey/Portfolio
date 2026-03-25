@@ -15,13 +15,11 @@
   }
   body { font-family: 'Segoe UI', sans-serif; background: #fff; color: var(--text); scroll-behavior: smooth; }
 
-  /* NAV */
   nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.97); padding: 1rem 2rem; display:flex; justify-content:flex-end; z-index:100; border-bottom: 1px solid #e0e0e0; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
   nav ul { list-style:none; display:flex; gap:2rem; }
   nav ul a { color: var(--navy); text-decoration:none; font-size:0.9rem; font-weight:500; transition:color 0.3s; }
   nav ul a:hover { color: var(--accent); }
 
-  /* HERO */
   .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; padding: 6rem 4rem 2rem; background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%); }
   .hero-inner { max-width:900px; width:100%; display:flex; align-items:center; justify-content:space-between; gap:3rem; }
   .hero-text { flex:1; }
@@ -31,12 +29,10 @@
   .hero-text p { color: var(--gray); line-height:1.8; font-size:1rem; }
   .hero-photo img { width:200px; height:200px; border-radius:50%; object-fit:cover; object-position: center 10%; border: 4px solid var(--accent); }
 
-  /* SECTIONS */
   section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
   .section-title { font-size:1.8rem; color: var(--navy); margin-bottom: 0.3rem; }
   .divider { width:50px; height:3px; background: var(--accent); margin-bottom:2.5rem; }
 
-  /* ABOUT */
   .about-grid { display:grid; grid-template-columns: 1fr 1fr; gap:2rem; }
   .about-text p { color: var(--gray); line-height:1.9; margin-bottom:1rem; }
   .stats { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
@@ -44,7 +40,6 @@
   .stat-box .num { font-size:1.8rem; font-weight:700; color: var(--accent); }
   .stat-box .label { font-size:0.8rem; color: var(--gray); margin-top:0.3rem; }
 
-  /* EXPERIENCE */
   .timeline { position:relative; }
   .timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background: #e0e0e0; }
   .job { padding-left:2rem; margin-bottom:2rem; position:relative; }
@@ -54,14 +49,12 @@
   .job-company { color: var(--accent); font-size:0.9rem; margin-top:0.2rem; }
   .job-date { color: var(--gray); font-size:0.85rem; }
 
-  /* SKILLS */
   .skills-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem; }
   .skill-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-top: 3px solid var(--accent); }
   .skill-card h4 { color: var(--navy); margin-bottom:1rem; font-size:0.95rem; }
   .tag-list { display:flex; flex-wrap:wrap; gap:0.5rem; }
   .tag { background: rgba(240,165,0,0.12); border: 1px solid rgba(240,165,0,0.4); color: #a07000; padding:0.25rem 0.6rem; border-radius:20px; font-size:0.78rem; }
 
-  /* PROJECTS */
   .projects-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
   .project-card { background: var(--lightgray); border-radius:8px; border-bottom: 3px solid var(--accent); overflow:hidden; }
   .project-header { padding:1.5rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition: background 0.2s; }
@@ -73,14 +66,12 @@
   .project-body.open { max-height:600px; padding: 0 1.5rem 1.5rem; }
   .project-body p { color: var(--gray); font-size:0.88rem; line-height:1.7; margin-bottom:0.7rem; }
 
-  /* EDUCATION */
   .edu-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
   .edu-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-left: 3px solid var(--accent); }
   .edu-card h4 { color: var(--navy); font-size:0.95rem; margin-bottom:0.3rem; }
   .edu-card .school { color: var(--accent); font-size:0.9rem; }
   .edu-card .year { color: var(--gray); font-size:0.82rem; margin-top:0.3rem; margin-bottom:0.8rem; }
 
-  /* CONTACT */
   .contact-box { background: var(--lightgray); border-radius:8px; padding:2.5rem; text-align:center; }
   .contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; }
   .contact-link { color: var(--navy); text-decoration:none; font-size:0.9rem; border: 1px solid var(--navy); padding:0.5rem 1.2rem; border-radius:4px; transition: background 0.2s; }
@@ -108,7 +99,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-text">
@@ -122,7 +112,6 @@
   </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-title">About Me</div>
   <div class="divider"></div>
@@ -141,7 +130,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-title">Professional Experience</div>
   <div class="divider"></div>
@@ -176,7 +164,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-title">Skills & Tools</div>
   <div class="divider"></div>
@@ -215,25 +202,11 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-title">Academic Projects</div>
   <div class="divider"></div>
   <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-header" onclick="toggleProject(this)">
-        <h4>🤖 AI-Optimized Scheduling & Cost Estimating</h4>
-        <span class="project-arrow">▼</span>
-      </div>
-      <div class="project-body">
-        <p style="font-size:0.82rem;color:var(--accent);">5,000 sq.ft. Commercial Building</p>
-        <p>Developed AI-assisted cost estimates and schedules, integrating RSMeans data with AI-based quantity takeoff methods. Built a detailed MS Project schedule using resource optimization and leveling techniques to reduce schedule overruns and cost variance.</p>
-        <p>Created a WBS, project charter, and network diagrams to identify bottlenecks. Delivered a transparent, data-driven bid package supporting scope definition and stakeholder coordination.</p>
-        <div class="tag-list">
-          <span class="tag">MS Project</span><span class="tag">RSMeans</span><span class="tag">AI Estimating</span><span class="tag">WBS</span><span class="tag">Resource Leveling</span>
-        </div>
-      </div>
-    </div>
+
     <div class="project-card">
       <div class="project-header" onclick="toggleProject(this)">
         <h4>🎓 Integrated Fundraising Strategy</h4>
@@ -248,10 +221,40 @@
         </div>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="project-header" onclick="toggleProject(this)">
+        <h4>🤖 AI-Optimized Scheduling & Cost Estimating</h4>
+        <span class="project-arrow">▼</span>
+      </div>
+      <div class="project-body">
+        <p style="font-size:0.82rem;color:var(--accent);">5,000 sq.ft. Commercial Building</p>
+        <p>Developed AI-assisted cost estimates and schedules, integrating RSMeans data with AI-based quantity takeoff methods. Built a detailed MS Project schedule using resource optimization and leveling techniques to reduce schedule overruns and cost variance.</p>
+        <p>Created a WBS, project charter, and network diagrams to identify bottlenecks. Delivered a transparent, data-driven bid package supporting scope definition and stakeholder coordination.</p>
+        <div class="tag-list">
+          <span class="tag">MS Project</span><span class="tag">RSMeans</span><span class="tag">AI Estimating</span><span class="tag">WBS</span><span class="tag">Resource Leveling</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header" onclick="toggleProject(this)">
+        <h4>🚦 Safety Redesign at Haridarshan Roundabout, Ahmedabad</h4>
+        <span class="project-arrow">▼</span>
+      </div>
+      <div class="project-body">
+        <p style="font-size:0.82rem;color:var(--accent);">B.E. Capstone, Gujarat Technological University</p>
+        <p>Conducted a comprehensive traffic study and proposed a safety-focused redesign of the Haridarshan Roundabout in Ahmedabad. Analyzed existing traffic conditions, vehicle speeds, and conflict points across four approach arms to identify safety deficiencies and recommend improvements.</p>
+        <p>Performed classified traffic volume counts during morning and evening peak hours, spot speed surveys using a radar gun, and videography-based data collection. Calculated PCU for each arm and analyzed peak hour volumes against IRC 65-1976 guidelines. Proposed redesign strategies including road markings, zebra crossings, signage, and geometric adjustments.</p>
+        <div class="tag-list">
+          <span class="tag">Traffic Volume Study</span><span class="tag">Spot Speed Survey</span><span class="tag">PCU Analysis</span><span class="tag">IRC 65-1976</span><span class="tag">Videography Survey</span><span class="tag">Roundabout Design</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="section-title">Education</div>
   <div class="divider"></div>
@@ -287,7 +290,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-title">Get In Touch</div>
   <div class="divider"></div>
