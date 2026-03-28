@@ -152,6 +152,19 @@
         </div>
         <div class="job-date">Aug 2024 – Dec 2024</div>
       </div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem;">
+        <img src="UC-4.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+        <img src="UC-5.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+        <img src="UC-6.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+        <img src="UC-1.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+        <img src="UC-2.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+        <img src="UC-3.jpg" onclick="openImg(this.src)" style="width:70px;height:55px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid #e0e0e0;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeImg()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;">
+      <img id="lightbox-img" style="max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 4px 30px rgba(0,0,0,0.5);"/>
     </div>
     <div class="job">
       <div class="job-header">
@@ -308,7 +321,15 @@
 </footer>
 
 <script>
-function toggleProject(header) {
+function openImg(src) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  lb.style.display = 'flex';
+}
+function closeImg() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
   const body = header.nextElementSibling;
   const arrow = header.querySelector('.project-arrow');
   body.classList.toggle('open');
