@@ -77,7 +77,22 @@
   #lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); z-index:999; align-items:center; justify-content:center; cursor:pointer; }
   #lightbox img { max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 4px 30px rgba(0,0,0,0.5); }
 
-  .edu-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
+  /* ARTICLES */
+  .article-card { background: var(--lightgray); border-radius:8px; border-left: 3px solid var(--accent); overflow:hidden; margin-bottom:1rem; }
+  .article-header { padding:1.2rem 1.5rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition: background 0.2s; }
+  .article-header:hover { background: #ebebeb; }
+  .article-header h4 { color: var(--navy); font-size:1rem; margin:0; }
+  .article-arrow { color: var(--accent); font-size:1.2rem; transition: transform 0.3s; }
+  .article-arrow.open { transform: rotate(180deg); }
+  .article-body { max-height:0; overflow:hidden; transition: max-height 0.5s ease; }
+  .article-body.open { max-height:5000px; }
+  .article-content { padding: 1.5rem; color: var(--gray); font-size:0.9rem; line-height:1.9; }
+  .article-content h2 { color: var(--navy); font-size:1.2rem; margin:1.5rem 0 0.5rem; }
+  .article-content h3 { color: var(--navy); font-size:1rem; margin:1.2rem 0 0.4rem; }
+  .article-content p { margin-bottom:0.9rem; }
+  .article-content ul { padding-left:1.5rem; margin-bottom:0.9rem; }
+  .article-content ul li { margin-bottom:0.4rem; }
+  .article-content strong { color: var(--text); } display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
   .edu-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-left: 3px solid var(--accent); }
   .edu-card h4 { color: var(--navy); font-size:0.95rem; margin-bottom:0.3rem; }
   .edu-card .school { color: var(--accent); font-size:0.9rem; }
@@ -108,6 +123,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#articles">Articles</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -288,6 +304,98 @@
   <img id="lightbox-img" src="" alt="Full view"/>
 </div>
 
+<section id="articles">
+  <div class="section-title">Articles</div>
+  <div class="divider"></div>
+
+  <div class="article-card">
+    <div class="article-header" onclick="toggleArticle(this)">
+      <h4>Microplastics in Land & Water: The Invisible Cycle of Contamination</h4>
+      <span class="article-arrow">▼</span>
+    </div>
+    <div class="article-body">
+      <div class="article-content">
+        <p><em>From Wastewater to Farmland, from Oceans to Our Plates: How Tiny Plastic Particles Are Completing a Toxic Loop Back to the Human Body</em></p>
+
+        <h2>Introduction</h2>
+        <p>Microplastics, plastic fragments smaller than five millimeters, have silently woven themselves into every corner of the planet. They drift through oceans, settle into agricultural soils, circulate in rivers, and ride the wind across continents. What makes them particularly alarming is not just their omnipresence, but the fact that they complete a full cycle: we produce them, we discard them, and ultimately, we consume them. An estimated 10 to 40 million metric tons of microplastic particles are released into the environment every year, and if current trends hold, that figure could double by 2040.</p>
+        <p>This article examines two critical but often overlooked pathways through which microplastics re-enter the human food chain: the marine seafood route and the agricultural biosolids route. It argues that we urgently need alternatives to the common practice of spreading treated sewage sludge on farmland.</p>
+
+        <h2>Part I: The Ocean Pathway, From Drain to Dinner Plate</h2>
+        <h3>How Microplastics Reach the Sea</h3>
+        <p>Every time we wash synthetic clothing, use cosmetic products containing microbeads, or discard plastic packaging, tiny particles enter the wastewater stream. Laundry alone is estimated to account for roughly 35% of all microplastic pollution reaching the ocean. Wastewater treatment plants capture the majority of these particles, but a significant fraction slips through with the treated effluent and flows into rivers, estuaries, and ultimately the open sea. An estimated eight million tonnes of plastic enter the world's seas and oceans each year, gradually fragmenting into ever-smaller particles under the forces of sunlight, waves, and abrasion.</p>
+
+        <h3>Entering the Marine Food Web</h3>
+        <p>Once in the ocean, microplastics are virtually indistinguishable from the natural food sources of marine organisms. Plankton, larvae, and small invertebrates ingest these particles either by mistaking them for food or by passively filtering contaminated water. The particles then move upward through the food chain through trophic transfer. Filter-feeding shellfish such as mussels, oysters, and clams are especially vulnerable. Studies suggest mussels and clams can take in up to 11,000 microplastic particles per year, while crabs may ingest as many as 15,000 particles per day.</p>
+
+        <h3>From Seafood to the Human Body</h3>
+        <p>When humans consume contaminated seafood, particularly shellfish, those microplastics enter our bodies. Researchers estimate that adults in the United States may ingest nearly four million microplastic particles per year from protein sources alone. Beyond seafood, microplastics have been detected in honey, tea, sugar, salt, beer, and bottled water, making dietary exposure nearly unavoidable.</p>
+
+        <h2>Part II: The Land Pathway, Biosolids and the Farmland Problem</h2>
+        <h3>What Happens Inside a Wastewater Treatment Plant</h3>
+        <p>Wastewater treatment plants capture between 88% and 99% of incoming microplastic particles. However, the removed microplastics become concentrated in the settled sludge. A single gram of this sludge can contain hundreds of microplastic particles. One Australian study found that biosolids contained between 1 and 17 kilograms of microplastics per metric ton.</p>
+
+        <h3>The Biosolids-to-Farmland Pipeline</h3>
+        <p>After treatment, sludge is reclassified as biosolids and widely applied to agricultural land. In the United Kingdom, approximately 87% of all sewage sludge ends up on agricultural soil. Across Europe and North America, roughly 50% of sewage sludge is processed for agricultural use. Along with plastic particles, biosolids carry PFAS, pharmaceutical residues, heavy metals, and chemical flame retardants. Current regulations monitor heavy metals and pathogens, but there are no established guidelines for microplastic or PFAS concentrations in biosolids applied to farmland.</p>
+
+        <h3>The Consequences for Soil and Crops</h3>
+        <p>Applying sewage sludge to agricultural land increases microplastic concentrations in soil by 723% to 1,445%. A landmark 25-year study found that microplastic levels in treated soils remained essentially unchanged over 22 years. As microplastics degrade in soil, they fragment into nanoplastics that can be absorbed by plant roots and move into crop tissues. A quantitative risk assessment published in 2025 found that under realistic sludge-application scenarios, 15 to 18% of soil species are adversely affected, rising to 39% under worst-case conditions.</p>
+
+        <h2>Part III: Microplastics in the Human Body</h2>
+        <p>Microplastics have been detected throughout the human body: in the blood, lungs, liver, kidneys, heart, placenta, testes, and even breast milk. A 2025 study published in Nature Medicine found that microplastic concentrations in human brain tissue had increased by approximately 50% between 2016 and 2024. It is estimated that people inhale approximately 68,000 microplastic particles every day, and adults consume the equivalent of one credit card's worth of plastic per week.</p>
+
+        <h2>Part IV: Why We Must Rethink Biosolids on Farmland</h2>
+        <h3>The Case Against Continued Land Application</h3>
+        <ul>
+          <li><strong>Persistent accumulation:</strong> Microplastics in soil do not degrade meaningfully over decades, turning farmland into a permanent sink for plastic pollution.</li>
+          <li><strong>Unregulated contaminants:</strong> There are currently no national or international guidelines limiting microplastic or PFAS concentrations in biosolids applied to land.</li>
+          <li><strong>Food chain contamination:</strong> Nanoplastics from degraded microplastics can be taken up by crops and enter the food supply, creating yet another exposure route for humans.</li>
+          <li><strong>Ecological damage:</strong> Current application rates are insufficient to protect the vast majority of soil-dwelling species essential for healthy agricultural ecosystems.</li>
+          <li><strong>The "forever" problem:</strong> Unlike pathogens that can be killed through treatment, microplastics are essentially indestructible in environmental timeframes.</li>
+        </ul>
+
+        <h3>Alternatives to Land Application</h3>
+        <ul>
+          <li><strong>Incineration and thermal treatment:</strong> High-temperature incineration is currently the most effective method for destroying microplastics in sludge. Emerging technologies such as pyrolysis, gasification, and hydrothermal liquefaction show promise as they can recover energy while destroying plastic contaminants.</li>
+          <li><strong>Landfilling:</strong> Diverting biosolids to engineered landfills prevents direct soil contamination, though landfill space is finite and there is risk of microplastics leaching into groundwater over time.</li>
+          <li><strong>Advanced sludge treatment:</strong> Techniques such as froth flotation, high-gradient magnetic separation, and electrochemical separation show promise for extracting microplastics from biosolids before land application.</li>
+          <li><strong>Source reduction:</strong> Mandating microfiber filters on washing machines, banning microbeads in consumer products, improving plastic waste management, and transitioning to biodegradable alternatives.</li>
+          <li><strong>Alternative organic fertilizers:</strong> Animal manures, digestates from non-sewage sources, and composts produced from controlled waste streams can replace biosolids on farmland.</li>
+          <li><strong>Nutrient recovery technologies:</strong> Phosphorus and nitrogen can be extracted from biosolids through chemical processes without applying the sludge directly to soil.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Microplastics have created an invisible but deeply troubling loop. We produce plastic, discard it, it fragments, enters our water and soil, moves through ecosystems, contaminates our food, and accumulates in our bodies with concentrations increasing year over year. The practice of applying sewage sludge to farmland has become a significant vehicle for transferring microplastics from our wastewater into our food system. What is needed is a multi-pronged approach: stricter regulation of contaminants in biosolids, investment in advanced treatment and removal technologies, upstream policies that reduce plastic entering wastewater, and a willingness to bear the higher costs of safer disposal methods.</p>
+        <p><em>The microplastic crisis is not a future threat. It is a present reality, already measurable in our blood, our brains, and our children. The question is no longer whether we should act, but how quickly we can.</em></p>
+
+        <h2>References & Sources</h2>
+        <ul>
+          <li>Stanford Medicine. "Microplastics and our health: What the science says." January 2025.</li>
+          <li>CLEANR. "Enjoy Eating Fish? A New Study Reveals Which Seafood Has the Most Microplastics." 2025.</li>
+          <li>CounterPunch. "How Microplastics Threaten Marine Ecosystems and the Food Chain." March 2026.</li>
+          <li>Jangid, H. et al. "Microplastic contamination in fish: A systematic global review." Marine Pollution Bulletin, 219, 118279, 2025.</li>
+          <li>World Economic Forum. "Microplastics: Are we facing a new health crisis?" February 2025.</li>
+          <li>World Economic Forum. "How microplastics are making their way into farmland." August 2023.</li>
+          <li>Nizzetto, L. et al. "Are Agricultural Soils Dumps for Microplastics of Urban Origin?" Environmental Science & Technology, 2016.</li>
+          <li>Fidra. "The Hidden Cost of Sewage Sludge: Microplastics in Agricultural Soils." April 2025.</li>
+          <li>Ziajahromi, S. et al. "Comprehensive assessment of microplastics in Australian biosolids." Water Research, 2023.</li>
+          <li>Ramage, S.J.F.F. et al. "Microplastics in agricultural soils following sewage sludge applications: Evidence from a 25-year study." Chemosphere, 376, 144277, 2025.</li>
+          <li>Corradini, F. et al. "Fate of microplastics in agricultural soils amended with sewage sludge." Science of The Total Environment, 2021.</li>
+          <li>Gianico, A. et al. "Land Application of Biosolids in Europe." Water, 13(1), 103, 2021.</li>
+          <li>Environmental Science & Technology. "A Quantitative Environmental Risk Assessment for Microplastics in Sewage Sludge Applied to Land." 2025.</li>
+          <li>Weber, K. et al. "Investigating the dispersal of macro- and microplastics on agricultural fields 30 years after sewage sludge application." Scientific Reports, 2022.</li>
+          <li>Bawa, S.A. et al. "A review of methods for mitigating microplastic contamination in biosolids." Science of The Total Environment, 957, 177360, 2024.</li>
+          <li>Campen, M. et al. "Bioaccumulation of microplastics in decedent human brains." Nature Medicine, 31, 1114-1119, 2025.</li>
+          <li>Huang, H. et al. "Microplastics in the bloodstream can induce cerebral thrombosis." Science Advances, 11(4), eadr8243, 2025.</li>
+          <li>Zhang, Y. et al. "Microplastics and human health: unraveling the toxicological pathways." Frontiers in Public Health, 13, 1567200, 2025.</li>
+          <li>Penn State Extension. "Microplastics in Agricultural Lands." 2025.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <section id="education">
   <div class="section-title">Education</div>
   <div class="divider"></div>
@@ -347,6 +455,12 @@ function openImg(src) {
 }
 function closeImg() {
   document.getElementById('lightbox').style.display = 'none';
+}
+function toggleArticle(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.article-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
 }
 function toggleProject(header) {
   const body = header.nextElementSibling;
