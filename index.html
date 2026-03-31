@@ -25,13 +25,12 @@
   .hero-text { flex:1; }
   .hero-text h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--navy); margin-bottom: 0.5rem; }
   .hero-text h1 span { color: var(--accent); }
-  .hero-text h2 { height:0; overflow:hidden; }
   .hero-text p { color: var(--gray); line-height:1.8; font-size:1rem; }
   .hero-photo { text-align:center; }
   .hero-photo img { width:200px; height:200px; border-radius:50%; object-fit:cover; object-position: center 10%; border: 4px solid var(--accent); display:block; margin:0 auto; }
   .hero-photo p { margin-top:0.8rem; color:var(--navy); font-size:0.85rem; font-weight:600; line-height:1.8; }
 
-  section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+  section { padding: 3rem 2rem; max-width: 1000px; margin: 0 auto; }
   .section-title { font-size:1.8rem; color: var(--navy); margin-bottom: 0.3rem; }
   .divider { width:50px; height:3px; background: var(--accent); margin-bottom:2.5rem; }
 
@@ -64,20 +63,17 @@
   .project-header h4 { color: var(--navy); font-size:1rem; margin:0; }
   .project-arrow { color: var(--accent); font-size:1.2rem; transition: transform 0.3s; }
   .project-arrow.open { transform: rotate(180deg); }
-  .project-body { max-height:0; overflow:hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.5rem; }
+  .project-body { max-height:0; overflow:hidden; transition: max-height 0.4s ease; padding: 0 1.5rem; }
   .project-body.open { max-height:600px; padding: 0 1.5rem 1.5rem; }
   .project-body p { color: var(--gray); font-size:0.88rem; line-height:1.7; margin-bottom:0.7rem; }
 
-  /* GALLERY */
   .gallery-grid { display:flex; gap:1rem; overflow-x:auto; padding-bottom:0.5rem; }
   .gallery-grid img { width:180px; height:130px; flex-shrink:0; object-fit:cover; border-radius:8px; cursor:pointer; border:2px solid #e0e0e0; transition: transform 0.2s, box-shadow 0.2s; }
   .gallery-grid img:hover { transform: scale(1.03); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
 
-  /* LIGHTBOX */
   #lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); z-index:999; align-items:center; justify-content:center; cursor:pointer; }
   #lightbox img { max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 4px 30px rgba(0,0,0,0.5); }
 
-  /* ARTICLES */
   .article-card { background: var(--lightgray); border-radius:8px; border-left: 3px solid var(--accent); overflow:hidden; margin-bottom:1rem; }
   .article-header { padding:1.2rem 1.5rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition: background 0.2s; }
   .article-header:hover { background: #ebebeb; }
@@ -92,7 +88,11 @@
   .article-content p { margin-bottom:0.9rem; }
   .article-content ul { padding-left:1.5rem; margin-bottom:0.9rem; }
   .article-content ul li { margin-bottom:0.4rem; }
-  .article-content strong { color: var(--text); } display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; }
+  .article-content strong { color: var(--text); }
+  .article-content a { color: var(--accent); text-decoration:none; }
+  .article-content a:hover { text-decoration:underline; }
+
+  .edu-grid { display:grid; grid-template-columns: 1fr; gap:2rem; }
   .edu-card { background: var(--lightgray); border-radius:8px; padding:1.5rem; border-left: 3px solid var(--accent); }
   .edu-card h4 { color: var(--navy); font-size:0.95rem; margin-bottom:0.3rem; }
   .edu-card .school { color: var(--accent); font-size:0.9rem; }
@@ -108,9 +108,7 @@
   @media(max-width:650px) {
     .hero { padding: 6rem 2rem 2rem; }
     .hero-inner { flex-direction:column-reverse; text-align:center; }
-    .about-grid,   .article-content a { color: var(--accent); text-decoration:none; }
-  .article-content a:hover { text-decoration:underline; }
-  .edu-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     nav ul { gap:1rem; }
   }
@@ -134,7 +132,6 @@
   <div class="hero-inner">
     <div class="hero-text">
       <h1>Hi, I'm <span>Shatrughan</span></h1>
-      <h2></h2>
       <p>4+ years driving complex infrastructure projects from bid to closeout, specializing in cost estimating, scheduling, and construction project controls.</p>
     </div>
     <div class="hero-photo">
@@ -259,7 +256,7 @@
       </div>
       <div class="project-body">
         <p style="font-size:0.82rem;color:var(--accent);">5,000 sq.ft. Commercial Building</p>
-        <p>Developed AI-assisted cost estimates and schedules, integrating RSMeans data with AI-based quantity takeoff methods. Built a detailed MS Project schedule using resource optimization and leveling techniques to reduce schedule overruns and cost variance.</p>
+        <p>Developed AI-assisted cost estimates and schedules, integrating RSMeans data with AI-based quantity takeoff methods. Built a detailed MS Project schedule using resource optimization and leveling techniques.</p>
         <p>Created a WBS, project charter, and network diagrams to identify bottlenecks. Delivered a transparent, data-driven bid package supporting scope definition and stakeholder coordination.</p>
         <div class="tag-list">
           <span class="tag">MS Project</span><span class="tag">RSMeans</span><span class="tag">AI Estimating</span><span class="tag">WBS</span><span class="tag">Resource Leveling</span>
@@ -273,10 +270,10 @@
       </div>
       <div class="project-body">
         <p style="font-size:0.82rem;color:var(--accent);">B.E. Capstone, Gujarat Technological University</p>
-        <p>Conducted a comprehensive traffic study and proposed a safety-focused redesign of the Haridarshan Roundabout in Ahmedabad. Analyzed existing traffic conditions, vehicle speeds, and conflict points across four approach arms to identify safety deficiencies and recommend improvements.</p>
-        <p>Performed classified traffic volume counts during morning and evening peak hours, spot speed surveys using a radar gun, and videography-based data collection. Calculated PCU for each arm and analyzed peak hour volumes against IRC 65-1976 guidelines. Proposed redesign strategies including road markings, zebra crossings, signage, and geometric adjustments.</p>
+        <p>Conducted a comprehensive traffic study and proposed a safety-focused redesign of the Haridarshan Roundabout in Ahmedabad. Analyzed existing traffic conditions, vehicle speeds, and conflict points across four approach arms.</p>
+        <p>Performed classified traffic volume counts, spot speed surveys using a radar gun, and videography-based data collection. Calculated PCU for each arm and analyzed peak hour volumes against IRC 65-1976 guidelines.</p>
         <div class="tag-list">
-          <span class="tag">Traffic Volume Study</span><span class="tag">Spot Speed Survey</span><span class="tag">PCU Analysis</span><span class="tag">IRC 65-1976</span><span class="tag">Videography Survey</span><span class="tag">Roundabout Design</span>
+          <span class="tag">Traffic Volume Study</span><span class="tag">Spot Speed Survey</span><span class="tag">PCU Analysis</span><span class="tag">IRC 65-1976</span><span class="tag">Roundabout Design</span>
         </div>
       </div>
     </div>
@@ -309,7 +306,6 @@
 <section id="articles">
   <div class="section-title">Articles</div>
   <div class="divider"></div>
-
   <div class="article-card">
     <div class="article-header" onclick="toggleArticle(this)">
       <h4>Microplastics in Land & Water: The Invisible Cycle of Contamination</h4>
@@ -320,28 +316,28 @@
         <p><em>From Wastewater to Farmland, from Oceans to Our Plates: How Tiny Plastic Particles Are Completing a Toxic Loop Back to the Human Body</em></p>
 
         <h2>Introduction</h2>
-        <p>Microplastics, plastic fragments smaller than five millimeters, have silently woven themselves into every corner of the planet. They drift through oceans, settle into agricultural soils, circulate in rivers, and ride the wind across continents. What makes them particularly alarming is not just their omnipresence, but the fact that they complete a full cycle: we produce them, we discard them, and ultimately, we consume them. An estimated 10 to 40 million metric tons of microplastic particles are released into the environment every year, and if current trends hold, that figure could double by 2040.</p>
-        <p>This article examines two critical but often overlooked pathways through which microplastics re-enter the human food chain: the marine seafood route and the agricultural biosolids route. It argues that we urgently need alternatives to the common practice of spreading treated sewage sludge on farmland.</p>
+        <p>Microplastics, plastic fragments smaller than five millimeters, have silently woven themselves into every corner of the planet. They drift through oceans, settle into agricultural soils, circulate in rivers, and ride the wind across continents. An estimated 10 to 40 million metric tons of microplastic particles are released into the environment every year, and if current trends hold, that figure could double by 2040.</p>
+        <p>This article examines two critical but often overlooked pathways through which microplastics re-enter the human food chain: the marine seafood route and the agricultural biosolids route.</p>
 
         <h2>Part I: The Ocean Pathway, From Drain to Dinner Plate</h2>
         <h3>How Microplastics Reach the Sea</h3>
-        <p>Every time we wash synthetic clothing, use cosmetic products containing microbeads, or discard plastic packaging, tiny particles enter the wastewater stream. Laundry alone is estimated to account for roughly 35% of all microplastic pollution reaching the ocean. Wastewater treatment plants capture the majority of these particles, but a significant fraction slips through with the treated effluent and flows into rivers, estuaries, and ultimately the open sea. An estimated eight million tonnes of plastic enter the world's seas and oceans each year, gradually fragmenting into ever-smaller particles under the forces of sunlight, waves, and abrasion.</p>
+        <p>Every time we wash synthetic clothing, use cosmetic products containing microbeads, or discard plastic packaging, tiny particles enter the wastewater stream. Laundry alone accounts for roughly 35% of all microplastic pollution reaching the ocean. An estimated eight million tonnes of plastic enter the world's seas each year, gradually fragmenting into ever-smaller particles.</p>
 
         <h3>Entering the Marine Food Web</h3>
-        <p>Once in the ocean, microplastics are virtually indistinguishable from the natural food sources of marine organisms. Plankton, larvae, and small invertebrates ingest these particles either by mistaking them for food or by passively filtering contaminated water. The particles then move upward through the food chain through trophic transfer. Filter-feeding shellfish such as mussels, oysters, and clams are especially vulnerable. Studies suggest mussels and clams can take in up to 11,000 microplastic particles per year, while crabs may ingest as many as 15,000 particles per day.</p>
+        <p>Once in the ocean, microplastics move upward through the food chain through trophic transfer. Filter-feeding shellfish such as mussels, oysters, and clams are especially vulnerable. Studies suggest mussels and clams can take in up to 11,000 microplastic particles per year, while crabs may ingest as many as 15,000 particles per day.</p>
 
         <h3>From Seafood to the Human Body</h3>
-        <p>When humans consume contaminated seafood, particularly shellfish, those microplastics enter our bodies. Researchers estimate that adults in the United States may ingest nearly four million microplastic particles per year from protein sources alone. Beyond seafood, microplastics have been detected in honey, tea, sugar, salt, beer, and bottled water, making dietary exposure nearly unavoidable.</p>
+        <p>Researchers estimate that adults in the United States may ingest nearly four million microplastic particles per year from protein sources alone. Beyond seafood, microplastics have been detected in honey, tea, sugar, salt, beer, and bottled water, making dietary exposure nearly unavoidable.</p>
 
         <h2>Part II: The Land Pathway, Biosolids and the Farmland Problem</h2>
         <h3>What Happens Inside a Wastewater Treatment Plant</h3>
-        <p>Wastewater treatment plants capture between 88% and 99% of incoming microplastic particles. However, the removed microplastics become concentrated in the settled sludge. A single gram of this sludge can contain hundreds of microplastic particles. One Australian study found that biosolids contained between 1 and 17 kilograms of microplastics per metric ton.</p>
+        <p>Wastewater treatment plants capture between 88% and 99% of incoming microplastic particles. However, the removed microplastics become concentrated in the settled sludge. One Australian study found that biosolids contained between 1 and 17 kilograms of microplastics per metric ton.</p>
 
         <h3>The Biosolids-to-Farmland Pipeline</h3>
-        <p>After treatment, sludge is reclassified as biosolids and widely applied to agricultural land. In the United Kingdom, approximately 87% of all sewage sludge ends up on agricultural soil. Across Europe and North America, roughly 50% of sewage sludge is processed for agricultural use. Along with plastic particles, biosolids carry PFAS, pharmaceutical residues, heavy metals, and chemical flame retardants. Current regulations monitor heavy metals and pathogens, but there are no established guidelines for microplastic or PFAS concentrations in biosolids applied to farmland.</p>
+        <p>After treatment, sludge is reclassified as biosolids and widely applied to agricultural land. In the United Kingdom, approximately 87% of all sewage sludge ends up on agricultural soil. Along with plastic particles, biosolids carry PFAS, pharmaceutical residues, heavy metals, and chemical flame retardants. There are no established guidelines for microplastic or PFAS concentrations in biosolids applied to farmland.</p>
 
         <h3>The Consequences for Soil and Crops</h3>
-        <p>Applying sewage sludge to agricultural land increases microplastic concentrations in soil by 723% to 1,445%. A landmark 25-year study found that microplastic levels in treated soils remained essentially unchanged over 22 years. As microplastics degrade in soil, they fragment into nanoplastics that can be absorbed by plant roots and move into crop tissues. A quantitative risk assessment published in 2025 found that under realistic sludge-application scenarios, 15 to 18% of soil species are adversely affected, rising to 39% under worst-case conditions.</p>
+        <p>Applying sewage sludge to agricultural land increases microplastic concentrations in soil by 723% to 1,445%. A landmark 25-year study found that microplastic levels in treated soils remained essentially unchanged over 22 years. A quantitative risk assessment published in 2025 found that under realistic sludge-application scenarios, 15 to 18% of soil species are adversely affected, rising to 39% under worst-case conditions.</p>
 
         <h2>Part III: Microplastics in the Human Body</h2>
         <p>Microplastics have been detected throughout the human body: in the blood, lungs, liver, kidneys, heart, placenta, testes, and even breast milk. A 2025 study published in Nature Medicine found that microplastic concentrations in human brain tissue had increased by approximately 50% between 2016 and 2024. It is estimated that people inhale approximately 68,000 microplastic particles every day, and adults consume the equivalent of one credit card's worth of plastic per week.</p>
@@ -351,23 +347,23 @@
         <ul>
           <li><strong>Persistent accumulation:</strong> Microplastics in soil do not degrade meaningfully over decades, turning farmland into a permanent sink for plastic pollution.</li>
           <li><strong>Unregulated contaminants:</strong> There are currently no national or international guidelines limiting microplastic or PFAS concentrations in biosolids applied to land.</li>
-          <li><strong>Food chain contamination:</strong> Nanoplastics from degraded microplastics can be taken up by crops and enter the food supply, creating yet another exposure route for humans.</li>
+          <li><strong>Food chain contamination:</strong> Nanoplastics from degraded microplastics can be taken up by crops and enter the food supply.</li>
           <li><strong>Ecological damage:</strong> Current application rates are insufficient to protect the vast majority of soil-dwelling species essential for healthy agricultural ecosystems.</li>
           <li><strong>The "forever" problem:</strong> Unlike pathogens that can be killed through treatment, microplastics are essentially indestructible in environmental timeframes.</li>
         </ul>
 
         <h3>Alternatives to Land Application</h3>
         <ul>
-          <li><strong>Incineration and thermal treatment:</strong> High-temperature incineration is currently the most effective method for destroying microplastics in sludge. Emerging technologies such as pyrolysis, gasification, and hydrothermal liquefaction show promise as they can recover energy while destroying plastic contaminants.</li>
-          <li><strong>Landfilling:</strong> Diverting biosolids to engineered landfills prevents direct soil contamination, though landfill space is finite and there is risk of microplastics leaching into groundwater over time.</li>
-          <li><strong>Advanced sludge treatment:</strong> Techniques such as froth flotation, high-gradient magnetic separation, and electrochemical separation show promise for extracting microplastics from biosolids before land application.</li>
-          <li><strong>Source reduction:</strong> Mandating microfiber filters on washing machines, banning microbeads in consumer products, improving plastic waste management, and transitioning to biodegradable alternatives.</li>
-          <li><strong>Alternative organic fertilizers:</strong> Animal manures, digestates from non-sewage sources, and composts produced from controlled waste streams can replace biosolids on farmland.</li>
-          <li><strong>Nutrient recovery technologies:</strong> Phosphorus and nitrogen can be extracted from biosolids through chemical processes without applying the sludge directly to soil.</li>
+          <li><strong>Incineration and thermal treatment:</strong> High-temperature incineration is currently the most effective method. Emerging technologies such as pyrolysis, gasification, and hydrothermal liquefaction show promise.</li>
+          <li><strong>Landfilling:</strong> Diverting biosolids to engineered landfills prevents direct soil contamination, though landfill space is finite.</li>
+          <li><strong>Advanced sludge treatment:</strong> Froth flotation, high-gradient magnetic separation, and electrochemical separation show promise for extracting microplastics from biosolids.</li>
+          <li><strong>Source reduction:</strong> Mandating microfiber filters on washing machines, banning microbeads in consumer products, and transitioning to biodegradable alternatives.</li>
+          <li><strong>Alternative organic fertilizers:</strong> Animal manures, digestates from non-sewage sources, and composts from controlled waste streams.</li>
+          <li><strong>Nutrient recovery technologies:</strong> Phosphorus and nitrogen can be extracted from biosolids through chemical processes without applying sludge directly to soil.</li>
         </ul>
 
         <h2>Conclusion</h2>
-        <p>Microplastics have created an invisible but deeply troubling loop. We produce plastic, discard it, it fragments, enters our water and soil, moves through ecosystems, contaminates our food, and accumulates in our bodies with concentrations increasing year over year. The practice of applying sewage sludge to farmland has become a significant vehicle for transferring microplastics from our wastewater into our food system. What is needed is a multi-pronged approach: stricter regulation of contaminants in biosolids, investment in advanced treatment and removal technologies, upstream policies that reduce plastic entering wastewater, and a willingness to bear the higher costs of safer disposal methods.</p>
+        <p>Microplastics have created an invisible but deeply troubling loop. We produce plastic, discard it, it fragments, enters our water and soil, moves through ecosystems, contaminates our food, and accumulates in our bodies. What is needed is stricter regulation, investment in advanced treatment technologies, upstream policies that reduce plastic entering wastewater, and a willingness to bear the higher costs of safer disposal methods.</p>
         <p><em>The microplastic crisis is not a future threat. It is a present reality, already measurable in our blood, our brains, and our children. The question is no longer whether we should act, but how quickly we can.</em></p>
 
         <h2>References & Sources</h2>
@@ -395,7 +391,6 @@
       </div>
     </div>
   </div>
-
 </section>
 
 <section id="education">
@@ -449,6 +444,10 @@
   <p>© 2025 Shatrughan Pandey. New York, USA.</p>
 </footer>
 
+<div id="lightbox" onclick="closeImg()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:999;align-items:center;justify-content:center;cursor:pointer;">
+  <img id="lightbox-img" src="" alt="Full view" style="max-width:90%;max-height:90%;border-radius:8px;"/>
+</div>
+
 <script>
 function openImg(src) {
   const lb = document.getElementById('lightbox');
@@ -458,15 +457,15 @@ function openImg(src) {
 function closeImg() {
   document.getElementById('lightbox').style.display = 'none';
 }
-function toggleArticle(header) {
-  const body = header.nextElementSibling;
-  const arrow = header.querySelector('.article-arrow');
-  body.classList.toggle('open');
-  arrow.classList.toggle('open');
-}
 function toggleProject(header) {
   const body = header.nextElementSibling;
   const arrow = header.querySelector('.project-arrow');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+function toggleArticle(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.article-arrow');
   body.classList.toggle('open');
   arrow.classList.toggle('open');
 }
